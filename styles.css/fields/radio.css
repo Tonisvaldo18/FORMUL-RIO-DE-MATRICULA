@@ -1,0 +1,117 @@
+label + .radio-wrapper {
+    margin-top: 1rem;
+    text-align: center;
+   
+}
+
+.radio-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));  
+    gap: 1rem;
+}
+
+.radio-inner{
+    border: 2px solid var(--stroke-default);
+    border-radius: .5rem;
+
+    display: grid;
+    justify-items: center;
+    gap: .5rem;
+
+    padding: 2rem .5rem .5rem;
+    
+   position: relative;
+    & input,
+    & input:focus,
+    & input:hover{
+        all: unset;
+        position: absolute;
+        inset: 0;
+    }
+
+    .radio-image{
+        background-image: url(../../assets/icons/radio-default.svg);
+    
+    
+        width: 1.5rem;
+        height: 1.5rem;
+    
+        position: absolute;
+        top: .5rem;
+        left: .5rem;
+    }
+
+    &:hover, &:focus-within{
+        border: 1px solid var( --stroke-highlight);
+
+        & .radio-image{
+            background-image: url(../../assets/icons/radio-select.svg);
+        }
+    }
+
+    &:has(:checked){
+        border: 2px solid var( --stroke-highlight);
+
+        & .radio-image{
+            background-image: url(../../assets/icons/radio-select.svg);
+        }
+    }   
+}
+
+
+.label + .radio-sport{
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.radio-sport{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.radio-inner-sport{
+    border: 2px solid var(--stroke-default);
+    border-radius: .5rem;
+    width: 7.5rem;
+    gap: .5rem;
+    height: 8rem;
+    padding: 2rem .5rem .5rem;
+    justify-items: center;
+   
+    position: relative;
+    & input,
+    & input:focus,
+    & input:hover{
+        all: unset;
+        position: absolute;
+        inset: 0;
+    }
+
+    .radio-sport-image{
+        background-image: url(../../assets/icons/radio-default.svg);
+     
+        width: 1.5rem;
+        height: 1.5rem;
+    
+        position: absolute;
+        top: .5rem;
+        left: .5rem;
+    }
+
+    &:hover, &:focus-within{
+        border: 1px solid var(--stroke-highlight);
+
+        & .radio-sport-image{
+            background-image: url(../../assets/icons/radio-select.svg);
+        }
+    }
+
+    &:has(:checked){
+        border: 2px solid var(--stroke-highlight);
+        
+        & .radio-sport-image{
+            background-image: url(../../assets/icons/radio-select.svg);
+        }
+    }   
+}
